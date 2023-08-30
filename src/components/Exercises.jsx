@@ -9,7 +9,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerPage = 9;
 
-  const indexOfExercises = currentPage * exercisesPerPage;
+  const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
   const currentExercises = exercises.slice(
     indexOfFirstExercise,
@@ -36,9 +36,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
           exerciseOptions
         );
         setExercises(exercisesData);
-        fetchExercisesData();
       }
     };
+    fetchExercisesData();
   }, [bodyPart]);
 
   return (

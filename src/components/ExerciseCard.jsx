@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Stack, Typography } from "@mui/material";
-import Exercises from "./Exercises";
+// import Exercises from "./Exercises";
 
 const ExerciseCard = ({ exercise }) => {
   return (
